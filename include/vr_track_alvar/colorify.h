@@ -1,3 +1,5 @@
+//makes the AR tags prettier.
+//which I consider a solid investment of time.
 #include <std_msgs/ColorRGBA.h>
 #include <math.h>
 namespace alvar {
@@ -7,8 +9,8 @@ namespace alvar {
         //change maxID if you want a different scale, but it'll make there be less difference among close colors
         int maxID = 18;
         int scale = 7; //a rotational factor that ensures adjacent colors are not adjacent colors but all colors are still unique
-        markID *= scale;
         //maxID and scale
+        markID *= scale;
         markID %= maxID;
         double v = 0.9;
         double s = 1.0; //vary these if we need more colors
