@@ -1,0 +1,18 @@
+<launch>
+  
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <!-- <rosparam file="$(find vr_track_alvar)/control/workbench_controller.yaml"  command="load"/> -->
+
+  <!-- load the controllers -->
+  <group ns="joint_state_controller">
+    <param name="type" value="joint_state_controller/JointStateController"/>
+    <param name="publish_rate" value="50"/>
+  </group>
+  <param name="publish_rate" value="50"/>
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" args="joint_state_controller"/>
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen"/>
+
+</launch>

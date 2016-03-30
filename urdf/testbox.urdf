@@ -1,0 +1,276 @@
+<robot name="workbench">
+  <link name="worktableroot"/>
+  <link name="basebox">
+    <visual>
+      <material name = "gray">
+        <color rgba = "0.3 0.3 0.3 1"/>
+      </material>
+      <geometry>
+        <box size = "0.052 0.052 0.50"/> <!-- testing -->
+      </geometry>
+      <origin xyz="0 0 0.25" rpy = "0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size = "0.052 0.052 0.50"/>
+      </geometry>
+      <origin xyz="0 0 0.25" rpy = "0 0 0"/>
+    </collision>
+    <inertial>
+      <inertia ixx="0.02082" ixy="0.0" ixz="0.0" iyy="0.02082" iyz="0.0" izz="0.00080"/>
+      <mass value="0.98000"/>
+      <origin xyz="0 0 0.25"/>
+    </inertial>
+  </link>
+  
+  <gazebo reference="basebox">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  
+  <link name="marker6">
+    <visual>
+      <material name = "green">
+        <color rgba = "0.2 0.9 0.2 1"/>
+      </material>
+      <geometry>
+        <box size="0.05 0.05 0.001"/>
+      </geometry>
+      <origin xyz="0 0 0.0005"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0 0 0"/>
+      </geometry>
+      <origin xyz="0 0 0.0005"/>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0.0005"/>
+      <inertia ixx="0.00000" ixy="0.0" ixz="0.0" iyy="0.00000" iyz="0.0" izz="0.00000"/>
+      <mass value="0.00000"/>
+    </inertial>
+  </link>
+    
+  <gazebo reference="marker6">
+    <material>Gazebo/Green</material>
+  </gazebo>
+  
+  <link name="marker7">
+    <visual>
+      <material name = "blue">
+        <color rgba = "0.2 0.2 0.9 1"/>
+      </material>
+      <geometry>
+        <box size="0.05 0.05 0.001"/>
+      </geometry>
+      <origin xyz="0 0 0.0005"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0 0 0"/>
+      </geometry>
+      <origin xyz="0 0 0.0005"/>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0.0005"/>
+      <inertia ixx="0.00000" ixy="0.0" ixz="0.0" iyy="0.00000" iyz="0.0" izz="0.00000"/>
+      <mass value="0.00000"/>
+    </inertial>
+  </link>
+  
+  <gazebo reference="marker7">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  
+  <link name="base_table">
+    <visual>
+      <material name = "wood">
+        <color rgba = "0.80 0.67 0.49 1"/>
+      </material>
+      <geometry>
+        <box size="2 1 0.06"/>
+      </geometry>
+      <origin xyz="0 0 0.03"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="2 1 0.06"/>
+      </geometry>
+      <origin xyz="0 0 0.03"/>
+    </collision>
+    <inertial>
+      <inertia ixx="6.72412" ixy="0.0" ixz="0.0" iyy="26.82412" iyz="0.0" izz="33.50000"/>
+      <mass value="80.40000"/>
+      <origin xyz="0 0 0.03"/>
+    </inertial>
+  </link>
+  
+  <gazebo reference="base_table">
+    <material>Gazebo/Wood</material>
+  </gazebo>
+  
+  <link name="leg1">
+    <visual>
+      <material name = "wood">
+        <color rgba = "0.80 0.67 0.49 1"/>
+      </material>
+      <geometry>
+        <box size="0.05 0.05 0.6"/>
+      </geometry>
+      <origin xyz="0 0 -0.3"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.6"/>
+      </geometry>
+      <origin xyz="0 0 -0.3"/>
+    </collision>
+    <inertial>
+      <inertia ixx="0.07175" ixy="0.0" ixz="0.0" iyy="0.07175" iyz="0.0" izz="0.00056"/>
+      <mass value="1.34"/>
+      <origin xyz="0 0 -0.3"/>
+    </inertial>
+  </link>
+  
+  <gazebo reference="leg1">
+    <material>Gazebo/Wood</material>
+  </gazebo>
+
+  <link name="leg2">
+    <visual>
+      <material name = "wood">
+        <color rgba = "0.80 0.67 0.49 1"/>
+      </material>
+      <geometry>
+        <box size="0.05 0.05 0.6"/>
+      </geometry>
+      <origin xyz="0 0 -0.3"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.6"/>
+      </geometry>
+      <origin xyz="0 0 -0.3"/>
+    </collision>
+    <inertial>
+      <inertia ixx="0.07175" ixy="0.0" ixz="0.0" iyy="0.07175" iyz="0.0" izz="0.00056"/>
+      <mass value="1.34"/>
+      <origin xyz="0 0 -0.3"/>
+    </inertial>
+  </link>
+  
+  <gazebo reference="leg2">
+    <material>Gazebo/Wood</material>
+  </gazebo>
+  
+  <link name="leg3">
+    <visual>
+      <material name = "wood">
+        <color rgba = "0.80 0.67 0.49 1"/>
+      </material>
+      <geometry>
+        <box size="0.05 0.05 0.6"/>
+      </geometry>
+      <origin xyz="0 0 -0.3"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.6"/>
+      </geometry>
+      <origin xyz="0 0 -0.3"/>
+    </collision>
+    <inertial>
+      <inertia ixx="0.07175" ixy="0.0" ixz="0.0" iyy="0.07175" iyz="0.0" izz="0.00056"/>
+      <mass value="1.34"/>
+      <origin xyz="0 0 -0.3"/>
+    </inertial>
+  </link>
+  
+  <gazebo reference="leg3">
+    <material>Gazebo/Wood</material>
+  </gazebo>
+  
+  <link name="leg4">
+    <visual>
+      <material name = "wood">
+        <color rgba = "0.80 0.67 0.49 1"/>
+      </material>
+      <geometry>
+        <box size="0.05 0.05 0.6"/>
+      </geometry>
+      <origin xyz="0 0 -0.3"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.6"/>
+      </geometry>
+      <origin xyz="0 0 -0.3"/>
+    </collision>
+    <inertial>
+      <inertia ixx="0.07175" ixy="0.0" ixz="0.0" iyy="0.07175" iyz="0.0" izz="0.00056"/>
+      <mass value="1.34"/>
+      <origin xyz="0 0 -0.3"/>
+    </inertial>
+  </link>
+  
+  <gazebo reference="leg4">
+    <material>Gazebo/Wood</material>
+  </gazebo>
+
+  <joint name="tabletoplink" type="fixed">
+    <origin xyz="0 0 0.6" rpy="0 0 0"/>
+    <parent link="worktableroot"/>
+    <child link="base_table"/>
+  </joint>
+
+  <joint name="tableboxbind" type="continuous">
+    <origin xyz="0.95 0.45 0.06" rpy="0 0 0"/>
+    <parent link="base_table"/>
+    <child link="basebox"/>
+    <axis xyz = "0 0 1"/>
+    <dynamics friction=10000/>
+    <dynamics damping=100/>
+  </joint>
+  
+  <joint name="mark6bind" type="fixed">
+    <origin xyz="0 0.0265 0.46" rpy="0 1.5708 1.5708"/>
+    <parent link="basebox"/>
+    <child link="marker6"/>
+  </joint>
+  
+  <joint name="mark7bind" type="fixed">
+    <origin xyz="0.83 0.45 0.06" rpy="0 0 0"/>
+    <parent link="base_table"/>
+    <child link="marker7"/>
+  </joint>
+  
+  <joint name="leg1bind" type="fixed">
+    <origin xyz="0.975 0.475 0" rpy="0 0 0"/>
+    <parent link="base_table"/>
+    <child link="leg1"/>
+  </joint>
+  
+  <joint name="leg2bind" type="fixed">
+    <origin xyz="-0.975 0.475 0" rpy="0 0 0"/>
+    <parent link="base_table"/>
+    <child link="leg2"/>
+  </joint>
+  
+  <joint name="leg3bind" type="fixed">
+    <origin xyz="-0.975 -0.475 0" rpy="0 0 0"/>
+    <parent link="base_table"/>
+    <child link="leg3"/>
+  </joint>
+  
+  <joint name="leg4bind" type="fixed">
+    <origin xyz="0.975 -0.475 0" rpy="0 0 0"/>
+    <parent link="base_table"/>
+    <child link="leg4"/>
+  </joint>
+  
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/workbench</robotNamespace>
+    </plugin>
+  </gazebo>
+  
+</robot>

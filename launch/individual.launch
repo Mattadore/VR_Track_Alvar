@@ -1,0 +1,9 @@
+<launch>
+	<arg name="marker_size" default="5.5" />
+
+	<arg name="output_frame" default="head_mount_kinect_ir_optical_frame" />
+    
+    <arg name = "markers" default="workbench/marker6:6 workbench/marker7:7"/>
+
+	<node name="vr_track_alvar" pkg="vr_track_alvar" type="individual" respawn="false" output="screen" args="$(arg marker_size) $(arg output_frame) $(arg markers)" />
+</launch>
